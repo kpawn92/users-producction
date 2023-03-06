@@ -18,6 +18,9 @@ exports.pool = (0, promise_1.createPool)({
     password: process.env.PASS || '',
     //port: Number(process.env.DB_PORT) || 3306,
     database: process.env.DB_MYSQL || 'usersdb',
+    ssl: {
+        rejectUnauthorized: true
+    },
 });
 const isConn = () => __awaiter(void 0, void 0, void 0, function* () {
     const [res] = yield exports.pool.query('SELECT NOW()');
