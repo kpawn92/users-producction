@@ -16,7 +16,7 @@ exports.pool = (0, promise_1.createPool)({
     host: process.env.HOST || 'localhost',
     user: process.env.USER || 'root',
     password: process.env.PASS || '',
-    port: Number(process.env.DB_PORT) || 3306,
+    //port: Number(process.env.DB_PORT) || 3306,
     database: process.env.DB_MYSQL || 'usersdb',
 });
 const isConn = () => __awaiter(void 0, void 0, void 0, function* () {
